@@ -1,1 +1,5 @@
-# PCA-image-denoising
+# Denoising by principal component analysis (PCA)
+
+This project was developed for the *Introduction to Image Processing* (IMA201 2022-23) course at Télécom Paris (Institut Polytechnique de Paris) and was supervized by Professor Elsa Angelini. 
+
+The objective of this project was to understand, implement and test (both on synthetic and real images) the denoising method proposed in the article *Two-stage image denoising by principal component analysis (PCA) with local pixel grouping (LPG)*, by L. Zhang et. al. [1]. Essentially, the article proposes the modeling of a pixel and its neighborhood as a vector variable, from this perspective, for each pixel of the image, a group of training samples is selected with similar local spatial structures, from which a PCA transform can be estimated. In the PCA domain, the energy of the noiseless dataset concentrates on the most important components, while the energy of the noise is more evenly distributed, coefficient shrinkage can then be applied to remove the noise. This procedure is applied twice, in the first iteration or stage, most of the noise is removed, the second stage further refines the output, yielding results comparable to those of state-of-the-art algorithms.
